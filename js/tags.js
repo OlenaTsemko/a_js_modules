@@ -10,9 +10,15 @@ function onTagsClick(event) {
   //   console.log('event.currentTarget: ', event.currentTarget);
   //   console.log('nodeName: ', event.target.nodeName);
 
+  // первый вариант проверки
   if (event.target.nodeName !== 'BUTTON') {
     return;
   }
+
+  // второй вариант проверки
+  // if (event.currentTarget === event.target) {
+  //   return;
+  // }
 
   const nextActiveTag = event.target;
   const activeTagValue = nextActiveTag.dataset.value;
